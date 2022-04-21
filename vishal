@@ -1,0 +1,18 @@
+create database employees_D
+create table Employees_Details(Employee_Id int primary key,F_name char(60),L_name char(60),salary float, Joining_date date,department char(50), Gender char(10));
+select*from Employees_Details;
+sp_help Employees_Details;
+insert into Employees_Details values
+(1,'vikash','Ahlawat',600000,'2013-02-15 11:15:14.000','IT','Male'),
+(2,'ashish','Kumar',1000000.00,'2020-02-15 11:15:14','IT','Male'),
+(3,'nikita','jai',530000.00,'2014-02-15 11:15:14','HR','Female'),
+(4,'Nikhil','Sharma',480000.00,'2015-02-15 11:15:14','HR','Male');
+select*from Employees_Details where salary>=10000
+select*from Employees_Details where salary<=9000and salary>=15000
+select*from Employees_Details where salary<=9000 or salary<=15000
+select*from Employees_Details where F_name like 'a%';
+select*from Employees_Details where F_name like '%h';
+select*from Employees_Details where F_name like '%a%';
+select*from Employees_Details where F_name like '%a___';
+UPDATE Employees_Details SET department= 'it'WHERE Employee_Id=1 AND =30AND NOT gender LIKE 'SH%';
+SELECT*FROM Employees_Details WHERE F_name not like '[a-p]%'
